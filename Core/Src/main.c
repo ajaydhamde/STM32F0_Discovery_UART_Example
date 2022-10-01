@@ -89,13 +89,14 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  char *str = "Hello World";
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  HAL_UART_Transmit(huart, str, strlen(str), 1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
